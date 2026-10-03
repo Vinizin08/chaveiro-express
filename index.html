@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chaveiro 24 horas - Abertura de portas, troca de fechaduras, chaves automotivas e mais. Atendimento rápido e profissional.">
+  <meta name="keywords" content="chaveiro, chaveiro 24 horas, abertura de porta, troca de fechadura, chave automotiva, chaveiro residencial, chaveiro comercial">
+  <title>Chaveiro Express 24h | Abertura de Portas e Serviços de Chaveiro</title>
+  <style>
+/* ===== Reset & Base ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #e85d04;
+  --primary-dark: #d00000;
+  --primary-light: #f48c06;
+  --secondary: #1a1a2e;
+  --secondary-light: #16213e;
+  --text: #2d2d2d;
+  --text-muted: #6b7280;
+  --bg: #ffffff;
+  --bg-alt: #f8f9fb;
+  --border: #e5e7eb;
+  --success: #25d366;
+  --radius: 12px;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.12);
+  --transition: 0.25s ease;
+  --font: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition);
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== Top bar ===== */
+.top-bar {
+  background: var(--secondary);
+  color: #fff;
+  font-size: 0.875rem;
+  padding: 8px 0;
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.top-phone {
+  font-weight: 600;
+  color: var(--primary-light);
+}
+
+.top-phone:hover {
+  color: #fff;
+}
+
+/* ===== Header ===== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  transition: box-shadow var(--transition);
+}
+
+.header.scrolled {
+  box-shadow: var(--shadow);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  gap: 16px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--secondary);
+}
+
+.logo i {
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+.logo-accent {
+  color: var(--primary);
+}
+
+.nav {
+  display: flex;
+  gap: 28px;
+}
+
+.nav a {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.nav a:hover {
+  color: var(--primary);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: var(--secondary);
+  cursor: pointer;
+  padding: 6px;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(232, 93, 4, 0.4);
+}
+
+.btn-whatsapp {
+  background: var(--success);
+  color: #fff;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe57;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+}
+
+.btn-lg {
+  padding: 14px 26px;
+  font-size: 1rem;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* ===== Hero ===== */
+.hero {
+  position: relative;
+  min-height: 580px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 50%, #0f3460 100%);
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.6;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 60px 20px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(232, 93, 4, 0.2);
+  border: 1px solid rgba(232, 93, 4, 0.5);
+  color: var(--primary-light);
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(1.9rem, 5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.hero h1 span {
+  color: var(--primary-light);
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 540px;
+  margin-bottom: 28px;
+}
+
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.stat strong {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--primary-light);
+}
+
+.stat span {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ===== Sections ===== */
+.section {
+  padding: 80px 0;
+}
+
+.section-alt {
+  background: var(--bg-alt);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 48px;
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.section-header h2 {
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  color: var(--secondary);
+  margin-bottom: 12px;
+}
+
+.section-header p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+/* ===== Services ===== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.service-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  transition: all var(--transition);
+  position: relative;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+.service-card.featured {
+  border-color: var(--primary);
+  background: linear-gradient(180deg, #fff9f5 0%, #fff 100%);
+}
+
+.service-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 50px;
+  text-transform: uppercase;
+}
+
+.service-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(232, 93, 4, 0.1);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+}
+
+.service-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--secondary);
+}
+
+.service-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 14px;
+}
+
+.service-card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.service-card ul li {
+  font-size: 0.875rem;
+  color: var(--text);
+  padding-left: 18px;
+  position: relative;
+}
+
+.service-card ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* ===== Features ===== */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.feature {
+  text-align: center;
+  padding: 20px;
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: rgba(232, 93, 4, 0.1);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.feature h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--secondary);
+}
+
+.feature p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* ===== Steps ===== */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  counter-reset: step;
+}
+
+.step {
+  text-align: center;
+  padding: 24px 16px;
+  position: relative;
+}
+
+.step-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.step h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--secondary);
+}
+
+.step p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* ===== Testimonials ===== */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.testimonial {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  transition: box-shadow var(--transition);
+}
+
+.testimonial:hover {
+  box-shadow: var(--shadow);
+}
+
+.stars {
+  color: #fbbf24;
+  margin-bottom: 14px;
+  font-size: 0.9rem;
+}
+
+.testimonial p {
+  font-size: 0.95rem;
+  color: var(--text);
+  margin-bottom: 18px;
+  font-style: italic;
+}
+
+.testimonial footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.testimonial strong {
+  font-size: 0.95rem;
+  color: var(--secondary);
+}
+
+.testimonial span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ===== CTA Section ===== */
+.cta-section {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.cta-section h2 {
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.cta-section p {
+  font-size: 1.05rem;
+  opacity: 0.9;
+  margin-bottom: 24px;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.cta-section .btn-primary {
+  background: #fff;
+  color: var(--primary-dark);
+}
+
+.cta-section .btn-primary:hover {
+  background: #f0f0f0;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.cta-section .btn-whatsapp {
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid #fff;
+}
+
+.cta-section .btn-whatsapp:hover {
+  background: #fff;
+  color: var(--success);
+}
+
+/* ===== Contact ===== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.contact-item i {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(232, 93, 4, 0.1);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.contact-item strong {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--secondary);
+  margin-bottom: 2px;
+}
+
+.contact-item a,
+.contact-item span {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.contact-item a:hover {
+  color: var(--primary);
+}
+
+.contact-form {
+  background: var(--bg-alt);
+  border-radius: var(--radius);
+  padding: 32px;
+  border: 1px solid var(--border);
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--secondary);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  background: #fff;
+  transition: border-color var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(232, 93, 4, 0.15);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* ===== Footer ===== */
+.footer {
+  background: var(--secondary);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 60px 0 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.footer-brand .logo {
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.footer-brand p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-links h4 {
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.footer-links a,
+.footer-links p {
+  display: block;
+  font-size: 0.875rem;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-links a:hover {
+  color: var(--primary-light);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-note {
+  margin-top: 6px;
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+/* ===== WhatsApp float ===== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 60px;
+  height: 60px;
+  background: var(--success);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+  z-index: 999;
+  transition: all var(--transition);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 28px rgba(37, 211, 102, 0.6);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    gap: 0;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav a:last-child {
+    border-bottom: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .header-actions .btn-whatsapp {
+    display: none;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .top-bar .container {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-content {
+    padding: 40px 20px;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+  }
+
+  .hero-ctas .btn {
+    width: 100%;
+  }
+
+  .hero-stats {
+    gap: 20px;
+  }
+
+  .section {
+    padding: 56px 0;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+  }
+
+  .whatsapp-float {
+    width: 52px;
+    height: 52px;
+    font-size: 1.5rem;
+    bottom: 16px;
+    right: 16px;
+  }
+}
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <!-- Barra de emergência no topo -->
+  <div class="top-bar">
+    <div class="container">
+      <span><i class="fas fa-clock"></i> Atendimento 24 horas · 7 dias por semana</span>
+      <a href="tel:+5511999999999" class="top-phone"><i class="fas fa-phone-alt"></i> (11) 99999-9999</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <i class="fas fa-key"></i>
+        <span>Chaveiro<span class="logo-accent">Express</span></span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#servicos">Serviços</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="header-actions">
+        <a href="https://wa.me/5511999999999?text=Olá! Preciso de um chaveiro." class="btn btn-whatsapp" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="tel:+5511999999999" class="btn btn-primary">
+          <i class="fas fa-phone-alt"></i> Ligar Agora
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-bolt"></i> Emergência 24h
+      </div>
+      <h1>Trancado do lado de fora?<br><span>Chegamos em até 30 minutos</span></h1>
+      <p class="hero-sub">Abertura de portas, troca de fechaduras, chaves automotivas e muito mais. Atendimento rápido, seguro e com preço justo.</p>
+      <div class="hero-ctas">
+        <a href="tel:+5511999999999" class="btn btn-primary btn-lg">
+          <i class="fas fa-phone-alt"></i> Ligar Agora — (11) 99999-9999
+        </a>
+        <a href="https://wa.me/5511999999999?text=Olá! Preciso de atendimento urgente." class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <strong>15+</strong>
+          <span>Anos de experiência</span>
+        </div>
+        <div class="stat">
+          <strong>8.500+</strong>
+          <span>Atendimentos</span>
+        </div>
+        <div class="stat">
+          <strong>4.9</strong>
+          <span>Avaliação média</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section class="section" id="servicos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Nossos Serviços</span>
+        <h2>Soluções completas em chaveiro</h2>
+        <p>Atendemos residências, comércios e veículos com equipamentos modernos e técnicos qualificados.</p>
+      </div>
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-icon"><i class="fas fa-door-open"></i></div>
+          <h3>Abertura de Portas</h3>
+          <p>Portas residenciais, comerciais e de segurança. Técnica sem danificar a fechadura sempre que possível.</p>
+          <ul>
+            <li>Portas de madeira e metal</li>
+            <li>Portas blindadas</li>
+            <li>Cofres e gavetas</li>
+          </ul>
+        </article>
+        <article class="service-card">
+          <div class="service-icon"><i class="fas fa-lock"></i></div>
+          <h3>Troca e Instalação de Fechaduras</h3>
+          <p>Instalação e substituição de fechaduras de todos os tipos, inclusive eletrônicas e biométricas.</p>
+          <ul>
+            <li>Fechaduras tetra e multiponto</li>
+            <li>Fechaduras digitais</li>
+            <li>Cilindros de alta segurança</li>
+          </ul>
+        </article>
+        <article class="service-card">
+          <div class="service-icon"><i class="fas fa-car"></i></div>
+          <h3>Chaves Automotivas</h3>
+          <p>Cópia, programação e abertura de veículos. Atendemos a maioria das marcas e modelos.</p>
+          <ul>
+            <li>Chaves com chip / canivete</li>
+            <li>Controles e telecomandos</li>
+            <li>Abertura de carros</li>
+          </ul>
+        </article>
+        <article class="service-card">
+          <div class="service-icon"><i class="fas fa-home"></i></div>
+          <h3>Residencial & Comercial</h3>
+          <p>Serviços para casas, apartamentos, empresas e condomínios com agilidade e discrição.</p>
+          <ul>
+            <li>Troca de segredos</li>
+            <li>Manutenção preventiva</li>
+            <li>Sistemas de controle de acesso</li>
+          </ul>
+        </article>
+        <article class="service-card">
+          <div class="service-icon"><i class="fas fa-key"></i></div>
+          <h3>Cópia de Chaves</h3>
+          <p>Cópias precisas de chaves comuns, tetra, yale e especiais com máquinas de alta precisão.</p>
+          <ul>
+            <li>Chaves tetra e multiponto</li>
+            <li>Chaves de cofre</li>
+            <li>Chaves codificadas</li>
+          </ul>
+        </article>
+        <article class="service-card featured">
+          <div class="service-badge">Mais pedido</div>
+          <div class="service-icon"><i class="fas fa-ambulance"></i></div>
+          <h3>Emergência 24 Horas</h3>
+          <p>Atendimento urgente a qualquer hora do dia ou da noite. Chegamos rápido no local.</p>
+          <ul>
+            <li>Resposta em minutos</li>
+            <li>Técnicos de plantão</li>
+            <li>Preço transparente</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diferenciais -->
+  <section class="section section-alt" id="diferenciais">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Por que nos escolher</span>
+        <h2>Qualidade e confiança em cada atendimento</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature">
+          <div class="feature-icon"><i class="fas fa-shipping-fast"></i></div>
+          <h3>Chegada rápida</h3>
+          <p>Tempo médio de chegada de 20 a 40 minutos na região metropolitana.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Sem danos desnecessários</h3>
+          <p>Priorizamos técnicas que preservam a fechadura e a porta sempre que possível.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon"><i class="fas fa-hand-holding-usd"></i></div>
+          <h3>Preço justo e transparente</h3>
+          <p>Orçamento claro antes de iniciar o serviço. Sem surpresas no final.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon"><i class="fas fa-user-check"></i></div>
+          <h3>Profissionais qualificados</h3>
+          <p>Técnicos experientes, uniformizados e com ferramentas de ponta.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon"><i class="fas fa-certificate"></i></div>
+          <h3>Garantia nos serviços</h3>
+          <p>Garantia em mão de obra e nas peças instaladas por nós.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon"><i class="fas fa-credit-card"></i></div>
+          <h3>Formas de pagamento</h3>
+          <p>Aceitamos Pix, cartão de crédito/débito e dinheiro.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Como funciona -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Passo a passo</span>
+        <h2>Como funciona o atendimento</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Entre em contato</h3>
+          <p>Ligue ou mande mensagem no WhatsApp. Descreva o problema.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Receba o orçamento</h3>
+          <p>Informamos o valor aproximado e o tempo estimado de chegada.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Técnico no local</h3>
+          <p>Nosso profissional chega, avalia e realiza o serviço com segurança.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Problema resolvido</h3>
+          <p>Você paga apenas o combinado e recebe garantia do serviço.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section class="section section-alt" id="depoimentos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Depoimentos</span>
+        <h2>O que nossos clientes dizem</h2>
+      </div>
+      <div class="testimonials-grid">
+        <blockquote class="testimonial">
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>"Fiquei trancado fora de casa às 2 da manhã. Liguei e em 25 minutos o técnico já estava resolvendo. Super profissionais!"</p>
+          <footer>
+            <strong>Carlos Mendes</strong>
+            <span>São Paulo — SP</span>
+          </footer>
+        </blockquote>
+        <blockquote class="testimonial">
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>"Troquei todas as fechaduras do apartamento. Serviço limpo, rápido e com ótimo preço. Recomendo demais."</p>
+          <footer>
+            <strong>Ana Paula Ribeiro</strong>
+            <span>Guarulhos — SP</span>
+          </footer>
+        </blockquote>
+        <blockquote class="testimonial">
+          <div class="stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p>"Perdi a chave do carro e eles fizeram uma nova com chip no mesmo dia. Atendimento excelente e preço justo."</p>
+          <footer>
+            <strong>Roberto Silva</strong>
+            <span>Osasco — SP</span>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA final -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Precisa de um chaveiro agora?</h2>
+      <p>Estamos prontos para atender você 24 horas por dia, 7 dias por semana.</p>
+      <div class="cta-buttons">
+        <a href="tel:+5511999999999" class="btn btn-primary btn-lg">
+          <i class="fas fa-phone-alt"></i> (11) 99999-9999
+        </a>
+        <a href="https://wa.me/5511999999999?text=Olá! Preciso de um chaveiro." class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section class="section" id="contato">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Contato</span>
+        <h2>Fale conosco</h2>
+        <p>Atendimento rápido por telefone, WhatsApp ou formulário.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <div>
+              <strong>Telefone / WhatsApp</strong>
+              <a href="tel:+5511999999999">(11) 99999-9999</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <strong>Horário</strong>
+              <span>24 horas · Todos os dias</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <strong>Área de atendimento</strong>
+              <span>São Paulo e região metropolitana</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <strong>E-mail</strong>
+              <a href="mailto:contato@chaveiroexpress.com.br">contato@chaveiroexpress.com.br</a>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+          </div>
+          <div class="form-group">
+            <label for="telefone">Telefone / WhatsApp</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+          </div>
+          <div class="form-group">
+            <label for="servico">Tipo de serviço</label>
+            <select id="servico" name="servico" required>
+              <option value="">Selecione...</option>
+              <option value="abertura">Abertura de porta</option>
+              <option value="fechadura">Troca / instalação de fechadura</option>
+              <option value="automotivo">Chave / abertura automotiva</option>
+              <option value="copia">Cópia de chave</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Descreva o problema ou o que precisa..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            <i class="fas fa-paper-plane"></i> Enviar solicitação
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <i class="fas fa-key"></i>
+            <span>Chaveiro<span class="logo-accent">Express</span></span>
+          </a>
+          <p>Serviços profissionais de chaveiro 24 horas. Segurança, rapidez e confiança.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Serviços</h4>
+          <a href="#servicos">Abertura de portas</a>
+          <a href="#servicos">Troca de fechaduras</a>
+          <a href="#servicos">Chaves automotivas</a>
+          <a href="#servicos">Cópia de chaves</a>
+        </div>
+        <div class="footer-links">
+          <h4>Contato</h4>
+          <a href="tel:+5511999999999">(11) 99999-9999</a>
+          <a href="https://wa.me/5511999999999" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="mailto:contato@chaveiroexpress.com.br">E-mail</a>
+        </div>
+        <div class="footer-links">
+          <h4>Horário</h4>
+          <p>Atendimento 24 horas<br>7 dias por semana<br>Incluindo feriados</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Chaveiro Express. Todos os direitos reservados.</p>
+        <p class="footer-note">Site demonstrativo — substitua telefone, e-mail e dados pelo seus.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante WhatsApp -->
+  <a href="https://wa.me/5511999999999?text=Olá! Preciso de um chaveiro." class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script>
+// Menu mobile
+const menuToggle = document.getElementById('menuToggle');
+const nav = document.getElementById('nav');
+
+if (menuToggle && nav) {
+  menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('open');
+    const icon = menuToggle.querySelector('i');
+    if (nav.classList.contains('open')) {
+      icon.classList.replace('fa-bars', 'fa-times');
+    } else {
+      icon.classList.replace('fa-times', 'fa-bars');
+    }
+  });
+
+  // Fecha o menu ao clicar em um link
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      menuToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+    });
+  });
+}
+
+// Header com sombra ao rolar
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 20) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+
+// Formulário de contato (simulação)
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const nome = document.getElementById('nome').value.trim();
+    const telefone = document.getElementById('telefone').value.trim();
+    const servico = document.getElementById('servico').value;
+    const mensagem = document.getElementById('mensagem').value.trim();
+
+    if (!nome || !telefone || !servico) {
+      alert('Por favor, preencha os campos obrigatórios.');
+      return;
+    }
+
+    // Monta mensagem para WhatsApp
+    const texto = encodeURIComponent(
+      `Olá! Meu nome é ${nome}.\n` +
+      `Telefone: ${telefone}\n` +
+      `Serviço: ${servico}\n` +
+      (mensagem ? `Mensagem: ${mensagem}` : '')
+    );
+
+    // Abre WhatsApp com a mensagem preenchida
+    window.open(`https://wa.me/5511999999999?text=${texto}`, '_blank');
+
+    // Feedback visual
+    const btn = contactForm.querySelector('button[type="submit"]');
+    const originalHTML = btn.innerHTML;
+    btn.innerHTML = '<i class="fas fa-check"></i> Redirecionando...';
+    btn.disabled = true;
+
+    setTimeout(() => {
+      btn.innerHTML = originalHTML;
+      btn.disabled = false;
+      contactForm.reset();
+    }, 2000);
+  });
+}
+
+// Máscara simples de telefone
+const telefoneInput = document.getElementById('telefone');
+if (telefoneInput) {
+  telefoneInput.addEventListener('input', (e) => {
+    let value = e.target.value.replace(/\D/g, '');
+    if (value.length > 11) value = value.slice(0, 11);
+
+    if (value.length > 6) {
+      value = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7)}`;
+    } else if (value.length > 2) {
+      value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
+    } else if (value.length > 0) {
+      value = `(${value}`;
+    }
+    e.target.value = value;
+  });
+}
+  </script>
+</body>
+</html>
